@@ -94,9 +94,18 @@ function Courses() {
     e.preventDefault();
     try {
       if (selectedCourse) {
-        await courseService.update({ ...selectedCourse, ...formData });
+        await courseService.update({
+          id: selectedCourse.id,
+          title: formData.title,
+          description: formData.description,
+          teacher: formData.teacherId ? { id: formData.teacherId } : null
+        });
       } else {
-        await courseService.create(formData);
+        await courseService.create({
+          title: formData.title,
+          description: formData.description,
+          teacher: formData.teacherId ? { id: formData.teacherId } : null
+        });
       }
       handleClose();
       loadCourses();
