@@ -53,4 +53,4 @@ All API calls to the backend are made using Axios with the following services:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/username/university-frontend.git
+git clone https://github.com/tzitziris/University-Project-Frontend-React.git
