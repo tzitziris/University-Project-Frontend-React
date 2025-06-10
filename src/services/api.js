@@ -45,7 +45,7 @@ export const courseService = {
 
 export const enrollmentService = {
   getAll: () => api.get('/enrollments'),
-  getAllDto: () => api.get('/enrollments/dto'),
+  getAllDto: () => api.get('/enrollments/dto'), //getAllDto: () => api.get('/enrollments/dto'),
   getById: (id) => api.get(`/enrollments/${id}`),
   create: (enrollment) => api.post('/enrollments', enrollment),
   update: (enrollment) => api.put('/enrollments', enrollment),
